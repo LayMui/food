@@ -29,6 +29,3 @@ yarn android
 6. Automatically manage signing
 5. Export
 
-
-
-https://stackoverflow.com/questions/5499125/how-to-create-ipa-file-using-xcode
