@@ -14,3 +14,21 @@ npm install react-navigation-stack @react-native-community/masked-view
 
 React Navigation v4 Docs:
 https://reactnavigation.org/docs/4.x/getting-started
+
+## Convert expo to react native project
+expo eject 
+yarn ios
+yarn android
+
+### To build ipa file on xcode
+1. Select the Targets: Food
+2. Go to Product -> Archive
+3. Click on Distribute App
+4. Click Development
+5. App Thinning: All compatible device variants
+6. Automatically manage signing
+5. Export
+
+
+
+https://stackoverflow.com/questions/5499125/how-to-create-ipa-file-using-xcode
