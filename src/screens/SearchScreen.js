@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView} from 'react-native';
+import { Button } from '@yaradigital/ahua-design-system.ui.button'
+
+
 import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useResults';
 import ResultsList from '../components/ResultsList';
@@ -17,7 +20,6 @@ const SearchScreen = ({navigation}) => {
   };
 
   return (
-    
     <>
       <SearchBar
         term={term}
@@ -25,24 +27,19 @@ const SearchScreen = ({navigation}) => {
         onTermSubmit={() => searchApi(term)}
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
-     
       <ScrollView>
-      <ResultsList 
-        results={filterResultsByPrice('$')} 
-        title="Cost Effective"
+        <ResultsList
+          results={filterResultsByPrice('$')}
+          title='Cost Effective'
         />
-      <ResultsList 
-        results={filterResultsByPrice('$$')} 
-        title="Bit Pricier" 
-        />
-      <ResultsList 
-        results={filterResultsByPrice('$$$')} 
-        title="Big Spender" 
+        <ResultsList results={filterResultsByPrice('$$')} title='Bit Pricier' />
+        <ResultsList
+          results={filterResultsByPrice('$$$')}
+          title='Big Spender'
         />
       </ScrollView>
-   
-   </>
-  );
+    </>
+  )
 };
 
 const styles = StyleSheet.create({});

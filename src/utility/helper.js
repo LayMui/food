@@ -8,9 +8,8 @@
  * @return {object}
  */
 
- export function testProperties(id, disableAccessible = false) {
-    const disableAccessibility = disableAccessible ? { accessible: false } : {};
-  
-    return { ...disableAccessibility, accessibilityLabel: id };
-  }
-  
+export function testProperties(id, disableAccessible = false) {
+  const disableAccessibility = disableAccessible ? { accessible: true } : {}
+
+  return { ...disableAccessibility, accessibilityLabel: id }
+}
